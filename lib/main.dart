@@ -1,6 +1,9 @@
-import 'package:app_getx_valtx/actualizacion_id/contador_id_view.dart';
-import 'package:app_getx_valtx/ciclo_de_vida/splash_view.dart';
-import 'package:app_getx_valtx/contador/contador_view.dart';
+import 'package:app_getx_valtx/02-actualizacion_id/contador_id_view.dart';
+import 'package:app_getx_valtx/03-ciclo_de_vida/splash_view.dart';
+import 'package:app_getx_valtx/01-contador/contador_view.dart';
+import 'package:app_getx_valtx/04-consumo_api/user_view.dart';
+import 'package:app_getx_valtx/06-reactivos/contador_reactivo_view.dart';
+import 'package:app_getx_valtx/06-reactivos/user_reactivo_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SplashView(),
+      home: const UserReactivoView(),
     );
   }
 }

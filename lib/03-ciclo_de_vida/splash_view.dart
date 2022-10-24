@@ -1,4 +1,4 @@
-import 'package:app_getx_valtx/ciclo_de_vida/splash_controller.dart';
+import 'package:app_getx_valtx/03-ciclo_de_vida/splash_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

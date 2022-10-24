@@ -1,4 +1,4 @@
-import 'package:app_getx_valtx/contador/contador_view.dart';
+import 'package:app_getx_valtx/01-contador/contador_view.dart';
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {

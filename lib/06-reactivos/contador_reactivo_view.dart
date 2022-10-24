@@ -1,19 +1,20 @@
-import 'package:app_getx_valtx/actualizacion_id/contador_id_controller.dart';
+import 'package:app_getx_valtx/06-reactivos/contador_reactivo_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ContadorIdView extends StatelessWidget {
-  const ContadorIdView({Key? key}) : super(key: key);
+class ContadorReactivoView extends StatelessWidget {
+  const ContadorReactivoView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<ContadorIdController>(
-      init: ContadorIdController(),
+    return GetBuilder<ContadorReactivoController>(
+      init: ContadorReactivoController(),
       builder: (controller) {
         print("Construyendo widgets");
         return Scaffold(
           appBar: AppBar(
-            title: Text("Contador id GETX"),
+            backgroundColor: Colors.amber,
+            title: const Text("Contador Reactivo"),
           ),
           body: Center(
             child: Column(
@@ -22,22 +23,16 @@ class ContadorIdView extends StatelessWidget {
                 const Text(
                   'You have pushed the button this many times:',
                 ),
-                GetBuilder<ContadorIdController>(
-                  id: "counterText",
-                  builder: (controller2) {
-                    print("Construyendo text");
-                    return Text(
-                      '${controller.counter}',
+                Obx(() => Text(
+                      "${controller.counter}",
                       style: Theme.of(context).textTheme.headline4,
-                    );
-                  },
-                ),
+                    )),
               ],
             ),
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              controller.increments();
+              controller.increment();
             },
             tooltip: 'Increment',
             child: const Icon(Icons.add),

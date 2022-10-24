@@ -1,4 +1,4 @@
-import 'package:app_getx_valtx/contador/contador_controller.dart';
+import 'package:app_getx_valtx/01-contador/contador_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,7 +17,7 @@ class ContadorView extends StatelessWidget {
           body: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
+              children: [
                 const Text(
                   'You have pushed the button this many times:',
                 ),
